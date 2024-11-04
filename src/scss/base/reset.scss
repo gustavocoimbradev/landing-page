@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+body, html {
+    overflow-x: hidden;
+    min-height: 100dvh;
+}
+
+figure {
+    display: flex;
+    img {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: map-get($principal, primaryFont), sans-serif;
+}

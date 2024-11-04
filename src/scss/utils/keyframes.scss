@@ -1,0 +1,76 @@
+// Tilt (left or right)
+
+$tiltLeftStart: translateY(-50%) scale(.6) rotate(-10deg);
+$tiltLeftEnd: translateY(-50%) scale(.6) rotate(-15deg);
+$tiltRightStart: translateY(-50%) scale(.6) rotate(10deg);
+$tiltRightEnd: translateY(-50%) scale(.6) rotate(15deg);
+
+$tiltLeftStartMobile: translateY(-50%) scale(.5) rotate(-10deg);
+$tiltLeftEndMobile: translateY(-50%) scale(.5) rotate(-15deg);
+$tiltRightStartMobile: translateY(-50%) scale(.5) rotate(10deg);
+$tiltRightEndMobile: translateY(-50%) scale(.5) rotate(15deg);
+
+.tilt-left {
+    animation: tiltLeft 5s infinite alternate;
+    @include mobile {
+        animation: tiltLeftMobile 5s infinite alternate;
+    }
+}
+
+@keyframes tiltLeft {
+    0% {
+        transform: $tiltLeftStart;
+    }
+    100% {
+        transform: $tiltLeftEnd;
+    }
+}
+
+@keyframes tiltLeftMobile {
+    0% {
+        transform: $tiltLeftStartMobile;
+    }
+    100% {
+        transform: $tiltLeftEndMobile;
+    }
+}
+
+.tilt-right {
+    animation: tiltRight 5s infinite alternate;
+    @include mobile {
+        animation: tiltRightMobile 5s infinite alternate;
+    }
+}
+
+@keyframes tiltRight {
+    0% {
+        transform: $tiltRightStart;
+    }
+    100% {
+        transform: $tiltRightEnd;
+    }
+}
+
+@keyframes tiltRightMobile {
+    0% {
+        transform: $tiltRightStartMobile;
+    }
+    100% {
+        transform: $tiltRightEndMobile;
+    }
+}
+
+// Tilt 
+
+.tilt {
+    animation: tilt 5s infinite alternate;
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}

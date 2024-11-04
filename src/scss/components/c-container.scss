@@ -1,0 +1,12 @@
+.c-container {
+
+    max-width: 992px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    height: 100%;
+
+    &--relative {
+        position: relative;
+    }
+    
+}
